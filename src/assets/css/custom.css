@@ -1,3 +1,15 @@
+.ReactModal__Overlay--after-open {
+  z-index: 10;
+}
+
+.fa-heart {
+  animation: heartpulse 1s infinite;
+}
+
+@keyframes heartpulse {
+  10% {transform: scale(1.1)}
+}
+
 .logo_holder {
   width: 50px;
   height: auto;

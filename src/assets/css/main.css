@@ -1145,7 +1145,6 @@ h3 {
   font-size: 12px;
 }
 #newsletter_card {
-  background-image: url("../../images/newsletter-bg.png");
 }
 .newsletter_wrapper {
   background: #C5203E;
@@ -1471,9 +1470,9 @@ a.list-group-item:hover .media-heading {
   margin-bottom: 30px;
   position: relative;
 }
+
 .gallery-grid .item .img-hover {
-  background: url("../../images/gallery/gallery-hover.png") center center
-  no-repeat rgba(0, 0, 0, 0.6);
+  background:center center no-repeat rgba(0, 0, 0, 0.6);
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -1797,7 +1796,6 @@ uneditable-input:focus {
   padding-right: 0;
 }
 .watch-film-player {
-  background-image: url("../../images/movie/movie.png");
   background-position: center center;
   background-size: cover;
   color: #FFFFFF;
@@ -2180,7 +2178,7 @@ div.zabuto_calendar tr.calendar-dow td {
   margin-top: 0;
 }
 .footer-widgets .widgets-content .widgets-list li:before {
-  background: url("../../images/footer-widgets/bulleted-list.png") 0 center
+  background: url("../images/bulleted-list.png") 0 center
   no-repeat;
   content: " ";
   padding-left: 15px;
@@ -2199,7 +2197,6 @@ div.zabuto_calendar tr.calendar-dow td {
   }
 }
 .footer-widgets .map {
-  background-image: url(../../images/world.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

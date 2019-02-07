@@ -1,24 +1,20 @@
 import React, { Component } from 'react'
 
 import Link from 'gatsby-link'
-import logo from '../images/flag.gif'
+import logo from '../assets/images/flag.gif'
+
+let HeaderLink = ({to, label, ...props}) =>
+<li><Link to={`${to}`}><span>{label}</span></Link></li>
+
+
+//not used 
+let VWCLink = () =>
+<Link to="/">
+  <img src={logo} alt="#VetsWhoCode Logo" style={{width: '50px', height: 'auto'}}/>
+</Link>
+
 
 class Nav extends Component {
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll)
-  }
-
-  handleScroll = () => {
-    const $nav = $('#fixedTopNav')
-
-    if ($(window).scrollTop() > 0) {
-      $nav.addClass('navbar-solid')
-      return
-    }
-
-    $nav.removeClass('navbar-solid')
-    $('.navbar-nav > li > a').blur()
-  }
 
   render() {
     return (
@@ -31,16 +27,6 @@ class Nav extends Component {
       >
         <div className="container">
           <div className="navbar-header">
-            <button
-              type="button"
-              className="navbar-toggle collapsed"
-              data-toggle="collapse"
-              data-target="#main-nav-collapse"
-              aria-expanded="false"
-            >
-              {' '}
-              <span className="sr-only">#VetsWhoCode</span> <span className="ion-drag" />
-            </button>
             <div className="navbar-brand" itemScope="" itemType="https://schema.org/Organization">
               {' '}
               <span className="sr-only">#VetsWhoCode</span>
@@ -56,59 +42,15 @@ class Nav extends Component {
             style={{ height: '1px' }}
           >
             <ul className="nav navbar-nav navbar-right" role="menu">
-              <li>
-                {' '}
-                <Link to="/">
-                  <span>Home</span>
-                </Link>
-              </li>
-              <li>
-                {' '}
-                <Link to="/about">
-                  <span>About</span>
-                </Link>
-              </li>
-              <li>
-                {' '}
-                <Link to="/syllabus">
-                  <span>Syllabus</span>
-                </Link>
-              </li>
-              <li>
-                {' '}
-                <Link to="/mentor">
-                  <span>Mentor</span>
-                </Link>
-              </li>
-              <li>
-                {' '}
-                <Link to="/apply">
-                  <span>Apply</span>
-                </Link>
-              </li>
-              <li>
-                {' '}
-                <Link to="/donate">
-                  <span>Donate</span>
-                </Link>
-              </li>
-              <li>
-                {' '}
-                <Link to="/contact">
-                  <span>Contact Us</span>
-                </Link>
-              </li>
-              <li>
-                {' '}
-                <a
-                  href="https://medium.com/vets-who-code"
-                  without="true"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
+                <HeaderLink to={"/"} label={"Home"}/>
+                <HeaderLink to={"/syllabus"} label={"Syllabus"}/>
+                <HeaderLink to={"/mentor"} label={"Mentors"}/>
+                <HeaderLink to={"/apply"} label={"Apply"}/>
+                <HeaderLink to={"/donate"} label={"Donate"}/>
+                <HeaderLink to={"/contact"} label={"Contact Us"}/>         
+              <li><a href="https://medium.com/vets-who-code" without="true" rel="noopener noreferrer" target="_blank">
                   <span>Blog</span>
-                </a>
-              </li>
+              </a></li>
             </ul>
           </div>
         </div>

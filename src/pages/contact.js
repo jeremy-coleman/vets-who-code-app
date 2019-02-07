@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import Layout from '../components/Layout'
 
-import thisIsUs from '../images/this_is_us.png'
+import thisIsUs from '../assets/images/this_is_us.png'
 
 export default class Contact extends Component {
   state = {

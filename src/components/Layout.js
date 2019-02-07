@@ -6,16 +6,9 @@ import Nav from './Nav'
 import Footer from './Footer'
 import StickyButton from './StickyButton'
 
-import '../assets/lib/bootstrap/dist/css/bootstrap.min.css'
-import '../assets/lib/owlcarousel/owl-carousel/owl.carousel.css'
-import '../assets/lib/owlcarousel/owl-carousel/owl.theme.css'
-import '../assets/lib/ionicons/css/ionicons.css'
-import '../assets/lib/fontawesome/css/font-awesome.min.css'
-import '../assets/extras/swipebox/css/swipebox.min.css'
-import '../assets/extras/rotating-carousel/css/style.css'
-import '../assets/extras/slick/slick.css'
-import '../assets/extras/magnificpopup/magnific-popup.css'
-import '../assets/lib/FlexSlider/flexslider.css'
+import '../assets/css/bootstrap/css/bootstrap.min.css'
+import '../assets/icons/ionicons/css/ionicons.css'
+import '../assets/icons/fontawesome/css/font-awesome.min.css'
 import '../assets/css/main.css'
 import '../assets/css/custom.css'
 
@@ -78,12 +71,6 @@ const TemplateWrapper = ({ children }) => (
   </div>
 )
 
-if (typeof window !== `undefined`) {
-  global.jQuery = require('../../static/vendor/jquery/dist/jquery')
-  require('../../static/vendor/bootstrap/dist/bootstrap')
-  window.$ = jQuery
-  window.jQuery = jQuery
-}
 
 TemplateWrapper.propTypes = {
   children: PropTypes.any,

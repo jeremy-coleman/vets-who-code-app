@@ -2,17 +2,37 @@ import React, { Component } from 'react'
 import Layout from '../components/Layout'
 import { Link } from 'gatsby'
 
-import vwcGIF from '../images/vwc.gif'
-import jerome from '../images/team/jerome.png'
-import noel from '../images/team/noel.png'
-import andrew from '../images/team/andrew.png'
-import thisIsUs from '../images/this_is_us.png'
+import vwcGIF from '../assets/images/vwc.gif'
+import jerome from '../assets/images/team/jerome.png'
+import noel from '../assets/images/team/noel.png'
+import andrew from '../assets/images/team/andrew.png'
+import thisIsUs from '../assets/images/this_is_us.png'
 
-import facebookVideo from '../video/vwc-facebook-reel.mp4'
+import facebookVideo from '../assets/video/vwc-facebook-reel.mp4'
 
 class About extends Component {
+videoRef = React.createRef()
+
+/** use the videoRef instead but no intellisense on .js for me, so meh
+ * Step 1) 
+ * on like ~line 70 below change ref={video => (this.video = video)} to ref = {this.videoRef}
+ * 
+ * Step2)
+ * this stuff right below here probbably should be like this , but i cant be sure without typescript lol
+ *   play = () => {
+    this.video.current.play()
+    this.video.current.onended = this.end
+
+    end = () => {
+      idk just do this with style components like styled.div`{props => props.isVideoEnded} ` or something
+  }
+  }
+ * 
+*/
+
+
   play = () => {
-    $('.play-button').fadeOut()
+    //$('.play-button').fadeOut()
     this.video.play()
     this.video.onended = this.end
   }

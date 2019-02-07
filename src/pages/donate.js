@@ -3,10 +3,12 @@ import { Link } from 'gatsby'
 
 import Layout from '../components/Layout'
 import DonateModal from '../components/DonateModal'
-import code from '../images/code.png'
-import john from '../images/profile.png'
-import thisIsUs from '../images/this_is_us.png'
-import '../assets/css/donate.css'
+import code from '../assets/images/code.png'
+import john from '../assets/images/profile.png'
+import thisIsUs from '../assets/images/this_is_us.png'
+
+//moved to custom.css and import in entry
+//import '../assets/css/donate.css'
 
 class Donate extends Component {
   state = {
