@@ -38,8 +38,9 @@ videoRef = React.createRef()
   }
 
   end = () => {
-    $('.success-video').hide('fast')
-    $('.vwc-animated-gif').toggle('fast')
+    //document.querySelector('.success-video').hide('fast')
+    document.querySelector('.success-video > fast').style.display = 'hidden'
+    document.querySelector('.vwc-animated-gif').classList.toggle('fast')
   }
 
   render() {

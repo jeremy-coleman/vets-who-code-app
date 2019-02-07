@@ -31,7 +31,7 @@ class HeaderSlider extends Component {
     const { mockWindowWidth } = this.state
 
     return (
-     <div>
+     <div style={{marginTop: '65px'}}>
         <Carousel>
           <div>
             <div style={{ position: 'relative' }}>

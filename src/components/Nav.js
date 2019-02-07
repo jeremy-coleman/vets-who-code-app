@@ -13,6 +13,32 @@ let VWCLink = () =>
   <img src={logo} alt="#VetsWhoCode Logo" style={{width: '50px', height: 'auto'}}/>
 </Link>
 
+        // <div className="container">
+        //   <div className="navbar-header">
+        //     <button
+        //       type="button"
+        //       className="navbar-toggle collapsed"
+        //       data-toggle="collapse"
+        //       data-target="#main-nav-collapse"
+        //       aria-expanded="false"
+        //     >
+        //       {' '}
+        //       <span className="sr-only">#VetsWhoCode</span> <span className="ion-drag" />
+        //     </button>
+        //     <div className="navbar-brand" itemScope="" itemType="https://schema.org/Organization">
+        //       {' '}
+        //       <span className="sr-only">#VetsWhoCode</span>
+        //       <Link to="/">
+        //         <img src={logo} alt="#VetsWhoCode Logo" className="logo_holder" />
+        //       </Link>
+        //     </div>
+        //   </div>
+        //   <div
+        //     className="navbar-collapse collapse"
+        //     id="main-nav-collapse"
+        //     aria-expanded="false"
+        //     style={{ height: '1px' }}
+        //   >
 
 class Nav extends Component {
 
@@ -20,27 +46,17 @@ class Nav extends Component {
     return (
       <nav
         id="fixedTopNav"
-        className="navbar navbar-fixed-top main-navigation"
+        className="navbar navbar-fixed-top main-navigation navbar-solid"
         itemScope=""
         itemType="https://schema.org/SiteNavigationElement"
         role="navigation"
       >
         <div className="container">
           <div className="navbar-header">
-            <div className="navbar-brand" itemScope="" itemType="https://schema.org/Organization">
-              {' '}
-              <span className="sr-only">#VetsWhoCode</span>
-              <Link to="/">
+              <Link to="/" className="navbar-brand" itemType="https://schema.org/Organization" itemScope="" >
                 <img src={logo} alt="#VetsWhoCode Logo" className="logo_holder" />
               </Link>
-            </div>
           </div>
-          <div
-            className="navbar-collapse collapse"
-            id="main-nav-collapse"
-            aria-expanded="false"
-            style={{ height: '1px' }}
-          >
             <ul className="nav navbar-nav navbar-right" role="menu">
                 <HeaderLink to={"/"} label={"Home"}/>
                 <HeaderLink to={"/syllabus"} label={"Syllabus"}/>
@@ -53,7 +69,6 @@ class Nav extends Component {
               </a></li>
             </ul>
           </div>
-        </div>
       </nav>
     )
   }

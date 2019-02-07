@@ -62,11 +62,7 @@
       "git add"
     ]
   },
-  "config": {
-    "ghooks": {
-      "pre-commit": "yarn lint; yarn test"
-    }
-  },
+
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/tests/setup-test-env.js",
     "testPathIgnorePatterns": [
